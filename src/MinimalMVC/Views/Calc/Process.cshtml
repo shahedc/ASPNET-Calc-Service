@@ -1,0 +1,15 @@
+﻿@model MinimalMVC.Models.CalcViewModel
+
+<h2>Processing...</h2>
+
+@using (Html.BeginForm("Process", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <h4>Processed</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        The result is:
+        @Html.DisplayFor(model => model.Result)
+    </div>
+}
+
