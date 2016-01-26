@@ -12,9 +12,6 @@ namespace MinimalMVC.Tests
         [Theory]
         [InlineData(4, 5, 9)]
         [InlineData(2, 3, 5)]
-        [InlineData(12, 3, 15)]
-        [InlineData(12, 4, 16)]
-        [InlineData(2, 1, 3)]
         public void TestAddNumbers(int x, int y, int expectedResult)
         {
             var cs = new CalcService();

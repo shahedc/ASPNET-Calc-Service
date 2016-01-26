@@ -8,30 +8,77 @@
 <html>
 <body>
     <h1>Calc</h1>
-    @using (Html.BeginForm("Process", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Add", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
-        <h4>Add two numbers.</h4>
-        <hr />
+        <h4>Add two integers.</h4>
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(m => m.Number1, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Number1, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
+            @Html.TextBoxFor(m => m.Number1, new { @class = "form-control" })
+
             @Html.LabelFor(m => m.Number2, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Number2, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Submit" />
-            </div>
+            @Html.TextBoxFor(m => m.Number2, new { @class = "form-control" })
+
+            <input type="submit" class="btn btn-default" value="Submit" />
         </div>
     }
+    <br />
+    <hr />
+
+    @using (Html.BeginForm("Subtract", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Subtract two integers.</h4>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Number1, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number1, new { @class = "form-control" })
+
+            @Html.LabelFor(m => m.Number2, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number2, new { @class = "form-control" })
+
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    }
+    <br />
+    <hr />
+
+    @using (Html.BeginForm("Multiply", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Multiply two integers.</h4>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Number1, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number1, new { @class = "form-control" })
+
+            @Html.LabelFor(m => m.Number2, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number2, new { @class = "form-control" })
+
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    }
+    <br />
+    <hr />
+
+    @using (Html.BeginForm("Divide", "Calc", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Divide two integers.</h4>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Number1, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number1, new { @class = "form-control" })
+
+            @Html.LabelFor(m => m.Number2, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Number2, new { @class = "form-control" })
+
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    }
+
+
 
 </body>
 </html>  

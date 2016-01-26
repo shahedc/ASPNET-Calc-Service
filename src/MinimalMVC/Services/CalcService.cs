@@ -12,6 +12,12 @@ namespace MinimalMVC.Services
             return x + y ;
         }
 
+        public int SubtractNumbers(int x, int y)
+        {
+            return x - y;
+        }
+        
+
         public int AddNumbersIfSuccessful(int x, int y, IExternalService es)
         {
             if (es.DoGreatThings())
@@ -45,12 +51,12 @@ namespace MinimalMVC.Services
             return (x / y);
         }
 
-        public int SafeDivide(int x, int y)
+        public double SafeDivide(int x, int y)
         {
-            var result = 0;
+            double result = 0;
             try
             {
-                result = x / y;
+                result = Convert.ToDouble(x) / y;
             }
             catch (DivideByZeroException e)
             {

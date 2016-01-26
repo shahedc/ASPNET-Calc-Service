@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
-using Microsoft.Framework.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+using MinimalMVC.Services;
 
 namespace MinimalMVC
 {
@@ -27,6 +28,7 @@ namespace MinimalMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<IExternalService, ExternalService>();
         }
     }
 }

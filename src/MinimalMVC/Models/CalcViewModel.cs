@@ -12,6 +12,6 @@ namespace MinimalMVC.Models
         public int Number1 { get; set; }
         [Display(Name = "Number 2")]
         public int Number2 { get; set; }
-        public int Result { get; set; }
+        public double Result { get; set; }
     }
 }
