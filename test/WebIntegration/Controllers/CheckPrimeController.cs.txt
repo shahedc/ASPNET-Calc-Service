@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Mvc;
+
+namespace WebIntegration.Controllers
+{
+    public class CheckPrimeController: Controller
+    {
+
+        public string Index(int number)
+        {
+            if (number == 0)
+                return "Pass in a number to check in the form /checkprime?5";
+            else if (number == 5)
+                return "5 is prime!";
+            else if (number == 6)
+                return "5 is NOT prime!";
+            else
+                return "Untested";
+        }
+    }
+}
